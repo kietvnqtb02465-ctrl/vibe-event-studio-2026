@@ -3,11 +3,12 @@
 > **Thí sinh:** Vũ Nguyễn Quốc Kiệt | **MSSV:** TB02465  
 > **Đề bài số 8:** Tạo Landing Page Sự Kiện Trong 5 Phút  
 > **Sản phẩm:** Vibe Event Studio  
-> **Link Online:** https://vibecodinglandingpagebuilder.vercel.app  
+> **Link Trực Tuyến:** https://vibecodinglandingpagebuilder.vercel.app  
+> **Mã Nguồn:** https://github.com/kietvnqtb02465-ctrl/vibe-event-studio-2026  
 
 ---
 
-## PHẦN 1: BẢNG KIỂM THỬ ĐỘ ỔN ĐỊNH VÀ XỬ LÝ LỖI (8 CA KIỂM THỬ TIÊU BIỂU)
+## PHẦN 1: BẢNG KIỂM THỬ ĐỘ ỔN ĐỊNH VÀ XỬ LÝ LỖI (8 CA TIÊU BIỂU)
 *(Đạt chuẩn Bảng A: Yêu cầu tối thiểu 6 ca kiểm thử. Dự án đã kiểm thử thực tế 82/82 ca tự động).*
 
 | Mã ca | Mục tiêu kiểm thử | Dữ liệu đầu vào (Input) | Kết quả mong đợi (Expected) | Kết quả thực tế | Trạng thái |
@@ -23,24 +24,32 @@
 
 ---
 
-## PHẦN 2: MINH CHỨNG TƯƠNG TÁC VỚI AI (5 ĐOẠN HỘI THOẠI & PROMPT TIÊU BIỂU)
+## PHẦN 2: MINH CHỨNG 5 ẢNH QUÁ TRÌNH LÀM VIỆC CÙNG AI (VIBE CODING)
 
-### 1. Phân tích đề bài và định hình cấu trúc Mini App
-* **Prompt giao việc:** *"Phân tích Đề số 8 cuộc thi Vibe Coding 2026: Tạo Landing Page sự kiện trong 5 phút. Hãy thiết kế mô hình dữ liệu Single File không phụ thuộc backend ngoài, gồm 5 tính năng cốt lõi: Form cấu hình, AI sinh copy AIDA, Live Preview có đồng hồ đếm ngược, Form đăng ký vé lưu LocalStorage và Nút tạo trang mới."*
-* **Kết quả nhận lại & cải thiện:** AI đề xuất cấu trúc kiến trúc DOM 2 chiều, định nghĩa State Model JSON lưu sự kiện và mảng khách tham dự trong `localStorage`.
+### 1. Khởi tạo Master Prompt và Đội ngũ Đa tác vụ (Teamwork Multi-Agent)
+* **Mô tả:** Phân rã bài toán Đề số 8: Tạo Landing Page sự kiện trong 5 phút. Kích hoạt quy trình Vibe Coding tự động với kiến trúc Single-file không phụ thuộc backend ngoài.
+![Ảnh 1: Khởi tạo Teamwork](proof_images/minh_chung_1_khoi_tao_teamwork.png)
 
-### 2. Tích hợp AI sinh Content Marketing chuẩn AIDA
-* **Prompt giao việc:** *"Tạo module sinh nội dung AI hỗ trợ cả Google Gemini API thật và bộ sinh Offline heuristic dự phòng. Đầu ra bắt buộc có: Headline giật tít thu hút chú ý, đoạn văn khơi gợi khao khát và đúng 3 gạch đầu dòng lợi ích độc quyền cho người tham dự."*
-* **Kết quả nhận lại & cải thiện:** Hoàn thiện hàm `generateSmartContent()`, cho phép nhận diện từ khóa (Tech, Startup, Workshop...) để sinh nội dung chuyên nghiệp trong 0.5 giây.
+---
 
-### 3. Xử lý đồng hồ đếm ngược Giờ G thời gian thực
-* **Prompt giao việc:** *"Lập trình bộ đếm ngược Giờ G hiển thị ngày, giờ, phút, giây dạng thẻ số Glassmorphism. Nếu thời gian sự kiện đã qua thì hiển thị thông báo sự kiện đang diễn ra hoặc đã kết thúc."*
-* **Kết quả nhận lại & cải thiện:** Tối ưu hóa hàm `setInterval` với cơ chế dọn dẹp bộ nhớ (cleanup memory leak) và tính toán khoảng cách miligiây chính xác.
+### 2. Điều phối Chuyên gia UI/UX & Thiết kế Glassmorphism
+* **Mô tả:** Chỉ đạo AI chuyển dịch ngôn ngữ thị giác sang phong cách Clean, Luminous Glassmorphism trong trẻo, tối ưu typography và responsive đa màn hình (390px, 1440px, 1920px).
+![Ảnh 2: Điều phối UI/UX Lead](proof_images/minh_chung_2_dieu_phoi_ui_ux.png)
 
-### 4. Nâng cấp bảo mật quyền riêng tư Ban Tổ Chức
-* **Prompt giao việc:** *"Kiểm tra luồng đăng nhập của Ban Tổ Chức. Cần loại bỏ hoàn toàn việc hiển thị email đã lưu trên giao diện modal để tránh lộ lọt danh sách tài khoản, thêm kiểm tra mật khẩu xác thực và xóa sạch input khi đăng xuất."*
-* **Kết quả nhận lại & cải thiện:** Viết hàm `resetAllAuthInputs()`, xóa bỏ box gợi ý tài khoản tĩnh, đảm bảo chuẩn bảo mật thông tin cá nhân.
+---
 
-### 5. Xây dựng hệ thống kiểm thử tự động E2E
-* **Prompt giao việc:** *"Viết bộ kiểm thử tự động toàn diện bằng Playwright bao phủ 4 tầng: Tính năng cơ bản, Trường hợp biên, Tương tác chéo và Kịch bản người dùng thực tế. Đảm bảo chạy pass 100% không có lỗi console."*
-* **Kết quả nhận lại & cải thiện:** Xây dựng thành công 82 bài test tự động tại `e2e_tests/run_tests.js`, chạy hoàn tất và pass 100% trong 62 giây.
+### 3. Kiểm toán độ tương phản chuẩn quốc tế WCAG 2.2 AA/AAA
+* **Mô tả:** AI tính toán tự động công thức độ chói tương đối (Relative Luminance) và tỷ lệ tương phản, nâng cấp toàn bộ màu chữ đạt chuẩn WCAG 2.2 AAA (tỷ lệ > 7:1) giúp người dùng dễ đọc.
+![Ảnh 3: Báo cáo kiểm toán tương phản màu](proof_images/minh_chung_3_kiem_toan_tuong_phan.png)
+
+---
+
+### 4. Bằng chứng nghiệm thu kỹ thuật (Verification Baseline)
+* **Mô tả:** AI tự động rà soát cú pháp HTML (cân bằng chuẩn 305/305 thẻ div), kiểm tra độ ổn định và thực thi bộ kiểm thử E2E tự động bao phủ 4 tầng.
+![Ảnh 4: Nghiệm thu kỹ thuật](proof_images/minh_chung_4_nghiem_thu_ky_thuat.png)
+
+---
+
+### 5. Kết quả kiểm thử E2E tự động: 82/82 Ca Đạt 100%
+* **Mô tả:** Chạy trọn vẹn 82 ca kiểm thử tự động bằng Playwright, đạt tỷ lệ 100% PASS trong 59.37 giây, 0 lỗi console, sẵn sàng bàn giao cho thí sinh Vũ Nguyễn Quốc Kiệt (TB02465).
+![Ảnh 5: Kết quả kiểm thử 82/82 PASS](proof_images/minh_chung_5_ket_qua_e2e_82_pass.png)
