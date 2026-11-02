@@ -4,6 +4,8 @@
 > **Tác giả:** Vũ Nguyễn Quốc Kiệt  
 > **Mã số sinh viên (MSSV):** TB02465  
 > **Bảng thi:** Bảng A (Công nghệ) & Bảng B (Kinh tế)  
+> **🌐 Trải nghiệm trực tuyến (Live Demo):** [https://vibecodinglandingpagebuilder.vercel.app](https://vibecodinglandingpagebuilder.vercel.app)  
+> **📦 Mã nguồn dự án (GitHub):** [https://github.com/kietvnqtb02465-ctrl/vibe-event-studio-2026](https://github.com/kietvnqtb02465-ctrl/vibe-event-studio-2026)  
 
 ---
 
